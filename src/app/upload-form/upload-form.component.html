@@ -1,0 +1,50 @@
+<!-- tu_componente.component.html -->
+<div class="container"  id="archivo">
+  <div class="row" style="align-items: self-end">
+    <div class="col-9">
+      <label for="formFile" class="form-label">Selecciona una Carta de Porte</label>
+      <input type="file" id="formFile" class="form-control" #fileInput/>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-primary" (click)="uploadFile(fileInput)" [disabled]="isLoading">
+        <span *ngIf="!isLoading">Procesar</span>
+        <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        <span *ngIf="isLoading">Procesando...</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">N° Carta de Porte</span>
+      <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="datos.nro_carta_porte">
+
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Flete Pagagador</span>
+      <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="datos.flete_pagador">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Chofer</span>
+      <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="datos.chofer">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Peso Bruto</span>
+      <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="datos.peso_bruto">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Peso Neto</span>
+      <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="datos.peso_neto">
+    </div>
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Peso Tara</span>
+    <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="datos.peso_tara">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Grano / Especie</span>
+    <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="datos.mercaderia">
+  </div>
+</div>

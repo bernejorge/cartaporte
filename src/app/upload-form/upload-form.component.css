@@ -1,0 +1,12 @@
+#archivo {
+  border: black;
+    border-style: solid;
+    border-width: thin;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+
+}
+
+.input-group-text{
+  width: 170px;
+}
